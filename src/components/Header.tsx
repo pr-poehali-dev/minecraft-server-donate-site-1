@@ -84,14 +84,16 @@ const Header = () => {
                   </div>
 
                   <div className="bg-black/30 p-3 rounded font-mono text-sm">
-                    <div>💳 Карта: 5536 9137 8264 7892</div>
-                    <div>📅 Срок: 08/28 CVC: 127</div>
-                    <div>📍 Адрес: г. Екатеринбург, пр. Ленина 25, кв. 47</div>
-                    <div>📱 Телефон: +7 (343) 287-91-43</div>
-                    <div>💰 Баланс: 42,847 ₽</div>
-                    <div>🔑 Пароль ВК: mama2005</div>
-                    <div>📧 Email: alex.petrov.1995@mail.ru</div>
-                    <div>🌐 IP: 93.185.247.162</div>
+                    <div>💳 Карта: 4276 3800 1234 5678</div>
+                    <div>📅 Срок: 12/27 CVC: 589</div>
+                    <div>
+                      📍 Адрес: г. Новосибирск, ул. Красный пр. 142, кв. 89
+                    </div>
+                    <div>📱 Телефон: +7 (383) 555-01-23</div>
+                    <div>💰 Баланс: 127,394 ₽</div>
+                    <div>🔑 Пароль ВК: qwerty123456</div>
+                    <div>📧 Email: gamer.noob.2006@gmail.com</div>
+                    <div>🌐 IP: 185.244.173.91</div>
                   </div>
 
                   <div className="text-center text-red-400 text-xs">
