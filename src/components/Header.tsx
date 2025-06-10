@@ -2,9 +2,19 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import LoginModal from "@/components/LoginModal";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 
 const Header = () => {
   const [showLoginModal, setShowLoginModal] = useState(false);
+  const [showHackerAlert, setShowHackerAlert] = useState(false);
 
   return (
     <header className="bg-slate-900 border-b border-green-500/20 sticky top-0 z-50">
@@ -32,12 +42,12 @@ const Header = () => {
           >
             Донат
           </a>
-          <a
-            href="#rules"
-            className="text-gray-300 hover:text-green-400 transition-colors"
+          <button
+            onClick={() => setShowHackerAlert(true)}
+            className="text-gray-300 hover:text-green-400 transition-colors cursor-pointer"
           >
             Правила
-          </a>
+          </button>
           <a
             href="#forum"
             className="text-gray-300 hover:text-green-400 transition-colors"
@@ -61,6 +71,38 @@ const Header = () => {
           </Button>
 
           <LoginModal open={showLoginModal} onOpenChange={setShowLoginModal} />
+
+          <AlertDialog open={showHackerAlert} onOpenChange={setShowHackerAlert}>
+            <AlertDialogContent className="bg-red-900 border-red-500 max-w-md">
+              <AlertDialogHeader>
+                <AlertDialogTitle className="text-red-300 text-center">
+                  ⚠️ СИСТЕМА ВЗЛОМАНА ⚠️
+                </AlertDialogTitle>
+                <AlertDialogDescription className="text-red-200 space-y-3">
+                  <div className="text-center font-bold text-lg text-red-300">
+                    ЧО ДОИГРАЛСЯ МАМКИН ХАЦКЕР???
+                  </div>
+
+                  <div className="bg-black/30 p-3 rounded font-mono text-sm">
+                    <div>💳 Карта: 4276 3801 2847 5633</div>
+                    <div>📅 Срок: 12/27 CVC: 394</div>
+                    <div>📍 Адрес: г. Москва, ул. Ленина 42</div>
+                    <div>📱 Телефон: +7 (999) 123-45-67</div>
+                    <div>💰 Баланс: 847,230 ₽</div>
+                  </div>
+
+                  <div className="text-center text-red-400 text-xs">
+                    Все твои данные у нас! 👀
+                  </div>
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter className="justify-center">
+                <AlertDialogAction className="bg-red-600 hover:bg-red-700 text-white">
+                  Понял, больше не буду! 😰
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </div>
       </div>
     </header>
