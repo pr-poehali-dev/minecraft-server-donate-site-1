@@ -40,7 +40,7 @@ const HeroSection = () => {
               IP для подключения:
             </p>
             <p className="text-white text-2xl font-mono bg-slate-900 rounded px-4 py-2 inline-block">
-              play.mineserver.ru
+              zaidi.eslinegay.ru
             </p>
           </div>
         </div>
