@@ -48,12 +48,12 @@ const Header = () => {
           >
             Правила
           </button>
-          <a
-            href="#forum"
-            className="text-gray-300 hover:text-green-400 transition-colors"
+          <button
+            onClick={() => window.open("https://rroll.to/gSLVra", "_blank")}
+            className="text-gray-300 hover:text-green-400 transition-colors cursor-pointer"
           >
             Форум
-          </a>
+          </button>
         </nav>
 
         <div className="flex items-center space-x-4">
