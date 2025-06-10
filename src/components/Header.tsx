@@ -30,12 +30,17 @@ const Header = () => {
         </div>
 
         <nav className="hidden md:flex items-center space-x-8">
-          <a
-            href="#home"
-            className="text-gray-300 hover:text-green-400 transition-colors"
+          <button
+            onClick={() =>
+              window.open(
+                "https://discord.com/channels/@me/1381974170111311914",
+                "_blank",
+              )
+            }
+            className="text-gray-300 hover:text-green-400 transition-colors cursor-pointer"
           >
             Главная
-          </a>
+          </button>
           <a
             href="#donate"
             className="text-gray-300 hover:text-green-400 transition-colors"
