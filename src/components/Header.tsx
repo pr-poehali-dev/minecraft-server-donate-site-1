@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
+import LoginModal from "@/components/LoginModal";
 
 const Header = () => {
+  const [showLoginModal, setShowLoginModal] = useState(false);
+
   return (
     <header className="bg-slate-900 border-b border-green-500/20 sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -46,6 +50,7 @@ const Header = () => {
           <Button
             variant="outline"
             className="border-green-500 text-green-400 hover:bg-green-500 hover:text-white"
+            onClick={() => setShowLoginModal(true)}
           >
             <Icon name="User" size={16} className="mr-2" />
             Войти
@@ -54,6 +59,8 @@ const Header = () => {
             <Icon name="Play" size={16} className="mr-2" />
             Играть
           </Button>
+
+          <LoginModal open={showLoginModal} onOpenChange={setShowLoginModal} />
         </div>
       </div>
     </header>
