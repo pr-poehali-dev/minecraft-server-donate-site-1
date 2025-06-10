@@ -21,6 +21,7 @@ const HeroSection = () => {
             <Button
               size="lg"
               className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 text-lg"
+              onClick={() => alert("Бро заходи ip: sus56.ru")}
             >
               <Icon name="Play" size={20} className="mr-2" />
               Начать играть
